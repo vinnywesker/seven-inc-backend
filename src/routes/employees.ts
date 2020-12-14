@@ -45,12 +45,11 @@ router.put('/:id', verifyToken, (req, res, next) => {
         body,
     } = req;
 
-    Employees.findByIdAndUpdate(
-        { _id: id },
-        body
-    )
-        .then(() => res.send({ message: 'success' }))
-        .catch(err => res.send(err))
+    Employees.findByIdAndUpdate(id, body, (err) => {
+        if (err) return res.send(err);
+
+        res.send({ message: 'success' });
+    })
 });
 
 router.delete('/:id', verifyToken, (req, res) => {

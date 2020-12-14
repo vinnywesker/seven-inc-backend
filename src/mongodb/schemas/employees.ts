@@ -8,7 +8,7 @@ const EmployeeSchema: Schema = new Schema({ // criei o schema para utilizar no b
         required: true
     },
     bornDate: {
-        type: Date,
+        type: String,
         required: true
     },
     salary: {

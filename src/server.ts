@@ -9,7 +9,7 @@ const app = express();
 
 //conexão com o mongodb
 const CONNECT_MONGODB: any = process.env.MONGODB;
-mongoose.connect(CONNECT_MONGODB, { useNewUrlParser: true, useUnifiedTopology: true }); //via Modulus
+mongoose.connect(CONNECT_MONGODB, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }); //via Modulus
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
