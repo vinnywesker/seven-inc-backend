@@ -14,9 +14,9 @@ mongoose.connect(CONNECT_MONGODB, { useNewUrlParser: true, useUnifiedTopology: t
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*"); // permissão para todas as aplicações acessar
-    res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE'); // métodos que utilizarei
-    app.use(cors());
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT,DELETE");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, authorization");
     next();
 });
 
