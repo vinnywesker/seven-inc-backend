@@ -22,7 +22,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "tsc && nodemon ./dist/server.js"
+    "start": "npx tsc && nodemon ./dist/server.js"
   },
   "keywords": [],
   "author": "",

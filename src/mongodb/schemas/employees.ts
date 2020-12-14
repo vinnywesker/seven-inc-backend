@@ -2,7 +2,7 @@ import { Schema, model } from 'mongoose'
 
 import { datesEmployees } from '../../types/types'
 
-const EmployeeSchema: Schema = new Schema({
+const EmployeeSchema: Schema = new Schema({ // criei o schema para utilizar no banco de dados
     name: {
         type: String,
         required: true

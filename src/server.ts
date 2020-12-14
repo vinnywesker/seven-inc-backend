@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 
 // ===================== ** CASO PRECISE ADICIONAOR MAIS ALGUMA ROTA ** ====================== //
 
-app.use('/employees', employees);
+app.use('/employees', employees); // possivel adicionar quantas rotas precisar ex: companies, vehicles, etc etc etc ....
 
 // ===================== ********************************************** ====================== //
 

@@ -4,7 +4,6 @@ import { Request, Response, NextFunction } from 'express'
 const SECRET: any = process.env.SECRET;
 
 
-
 const verifyToken = (req: Request, res: Response, next: NextFunction) => {
     const token = req.headers.authorization;
 
@@ -24,7 +23,7 @@ const verifyToken = (req: Request, res: Response, next: NextFunction) => {
 }
 
 const generateToken = () => {
-    const payload = { // esses dados fictícios iriam sair de um banco de dados
+    const payload = { // esses dados fictícios iriam sair de um banco de dados, mas como é apenas uma simulação, vamos usar esses mesmo ....
         id: 1,
         user: 'usuario',
         email: 'email@email.com'
